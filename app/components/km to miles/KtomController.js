@@ -1,4 +1,4 @@
 app.controller('KtomController', function () {
-    this.test = "HELLO ARE YOU THERE???"
+    this.test = "KILOMETERS TO MILES CONTROLLER!!!!"
    
 });

@@ -1,4 +1,4 @@
 app.controller('LandpController', function () {
-    this.test = "HELLO ARE YOU THERE???"
+    this.test = "LOANS AND PAYMENTS CONTROLLER!!!"
    
 });

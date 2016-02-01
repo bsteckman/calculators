@@ -1,4 +1,4 @@
 app.controller('PtokController', function () {
-    this.test = "HELLO ARE YOU THERE???"
+    this.test = "POUNDS TO KILOGRAMS CONTROLLER!!!"
    
 });

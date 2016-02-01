@@ -1,4 +1,4 @@
 app.controller('FtocController', function () {
-    this.test = "HELLO ARE YOU THERE???"
+    this.test = "F TO C CONTROLLER!!!"
    
 });
