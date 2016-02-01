@@ -1,4 +1,4 @@
-<html>
+<html ng-app = "calculators">
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,24 @@
 </head>
 
 <body>
-
+    <div class = "panel panel-default" ng-controller ="bmi" id = "bmi">
+        <h1> BMI Calculator </h1>
+    </div>
+    <div class = "panel panel-default" id = "ftoc">
+    <h1>Farenheight/Celsius</h1>
+    </div>     
+    <div class="panel panel-default" id="itof">
+        <h1>Inches/Feet</h1>
+    </div>
+    <div class="panel panel-default" id="ktom">
+        <h1>Kilometers/Miles</h1>
+    </div>
+    <div class="panel panel-default" id="ptok">
+        <h1>Pounds/Kilograms</h1>
+    </div>
+    <div class="panel panel-default" id="landp">
+        <h1>Loans/Payments</h1>
+    </div>
 
 
 
@@ -20,8 +37,14 @@
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
     crossorigin="anonymous"></script>
-    <script src="app/app.js"></script>
-    <script src="app/components/main-controller.js"></script>
+    <script src="app\app.js"></script>
+    <script src="app\components\MainController.js"></script>
+    <script src="app\components\BMI\BmiController.js"></script>
+    <script src="app\components\F to C\FtocController.js"></script>
+    <script src="app\components\inches to feet\ItofController.js"></script>
+    <script src="app\components\km to miles\KtomController.js"></script>
+    <script src="app\components\Lbs to Kgs\PtokController.js"></script>
+    <script src="app\components\loans and payments\LandpController.js"></script>
 </body>
 
 </html>
