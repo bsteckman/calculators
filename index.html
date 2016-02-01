@@ -11,23 +11,29 @@
 </head>
 
 <body>
-    <div class = "panel panel-default" ng-controller ="bmi" id = "bmi">
+    <div class = "panel panel-default" ng-controller ="BmiController as bmi" id = "bmi">
         <h1> BMI Calculator </h1>
+        <p>{{bmi.test}}</p>
     </div>
-    <div class = "panel panel-default" id = "ftoc">
+    <div class = "panel panel-default" ng-controller ="FtocController as ftoc" id = "ftoc">
     <h1>Farenheight/Celsius</h1>
+        <p>{{ftoc.test}}</p>
     </div>     
-    <div class="panel panel-default" id="itof">
+    <div class="panel panel-default" ng-controller ="ItofController as itof" id="itof">
         <h1>Inches/Feet</h1>
+        <p>{{itof.test}}</p>
     </div>
-    <div class="panel panel-default" id="ktom">
+    <div class="panel panel-default" ng-controller ="KtomController as ktom" id="ktom">
         <h1>Kilometers/Miles</h1>
+        <p>{{ktom.test}}</p>
     </div>
-    <div class="panel panel-default" id="ptok">
+    <div class="panel panel-default" ng-controller ="PtokController as ptok" id="ptok">
         <h1>Pounds/Kilograms</h1>
+        <p>{{ptok.test}}
     </div>
-    <div class="panel panel-default" id="landp">
+    <div class="panel panel-default" ng-controller ="LandpController as landp" id="landp">
         <h1>Loans/Payments</h1>
+        <p>{{landp.test}}</landp></p>
     </div>
 
 
