@@ -5,3 +5,25 @@
 .btn {
     margin: 5px;
 }
+
+.panel {
+    margin: 10px;
+}
+
+.form-control{
+    width : 200px;
+}
+
+.container {
+    background: dimgrey;
+}
+
+
+.page {
+    background: dimgray;
+}
+
+body{
+    margin: 0;
+    background: dimgray;
+}
