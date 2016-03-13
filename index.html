@@ -11,56 +11,95 @@
 </head>
 
 <body>
-    <div class="panel panel-default" ng-controller="BmiController as bmi" id="bmi">
-        <h1> BMI Calculator </h1>
-        <h2>BMI: {{((bmi.weight)/(bmi.height * bmi.height)) * 703}}</h2>
-        <label for="weight"> Weight: </label>
-        <input type="number" ng-model="bmi.weight" class="form-control" />
-        <label for="height"> Height: </label>
-        <input type="number" ng-model="bmi.height" class="form-control" />
+    <div id="calculator" class="panel panel-primary" ng-controller="BmiController as bmi" id="bmi">
+        <div class="panel-heading">
+            <h1 class="panel-title"> BMI Calculator </h1>
+        </div>
+        <div class="panel-body">
+            <h2>BMI: {{result}}</h2>
+            <label for="weight"> Weight in Pounds: </label>
+            <input type="number" ng-model="weight" class="form-control" />
+            <label for="height"> Height in Inches: </label>
+            <input type="number" ng-model="height" class="form-control" />
+            <button class="btn btn-primary" ng-click="newBMI()">Get BMI</button>
+            <button class="btn btn-danger" ng-click="reset()">Clear</button>
+        </div>
     </div>
-    <div class="panel panel-default" ng-controller="FtocController as ftoc" id="ftoc">
-        <h1>Fahrenheit/Celsius</h1>
-        <h2>Fahrenheit: {{(ftoc.celsius * 1.8) + 32}}  Celsius: {{(ftoc.fahrenheit - 32) / 1.8}}</h2>
-        <label for="Fahrenheit"> Fahrenheit: </label>
-        <input type="number" ng-model="ftoc.fahrenheit" class="form-control" />
-        <label for="Celsius"> Celsius: </label>
-        <input type="number" ng-model="ftoc.celsius" class="form-control" />
+    <div class="panel panel-primary" ng-controller="FtocController" id="ftoc">
+        <div class="panel-heading">
+            <h1 class="panel-title">Fahrenheit/Celsius</h1>
+        </div>
+        <div class="panel-body">
+            <h2>Fahrenheit: {{fahrResult}}  Celsius: {{celResult}}</h2>
+            <label for="Fahrenheit"> &#8457: </label>
+            <input type="number" ng-model="fahrenheit" class="form-control" />
+            <label for="Celsius"> &#8451: </label>
+            <input type="number" ng-model="celsius" class="form-control" />
+            <button class="btn btn-primary" ng-click="newFahr()">C -> F</button>
+            <button class="btn btn-primary" ng-click="newCels()">F -> C</button>
+            <button class="btn btn-danger" ng-click="reset()">Clear</button>
+        </div>
     </div>
-    <div class="panel panel-default" ng-controller="ItofController as itof" id="itof">
-        <h1>Inches/Feet</h1>
-        <h2>Feet: {{itof.inches / 12}} Inches:  {{itof.feet * 12}}</h2>
-        <label for="inches"> Inches: </label>
-        <input id="inches" type="number" ng-model="itof.inches" class="form-control" />
-        <label for="feet"> Feet: </label>
-        <input id="feet" type="number" ng-model="itof.feet" class="form-control" />
+    <div class="panel panel-primary" ng-controller="ItofController" id="ftoc">
+        <div class="panel-heading">
+            <h1 class="panel-title">Feet/Inches</h1>
+        </div>
+        <div class="panel-body">
+            <h2>Feet: {{feetResult}}  Inches {{inchesResult}}</h2>
+            <label for="Feet"> Feet: </label>
+            <input type="number" ng-model="feet" class="form-control" />
+            <label for="inches"> Inches: </label>
+            <input type="number" ng-model="inches" class="form-control" />
+            <button class="btn btn-primary" ng-click="newInches()">F -> I</button>
+            <button class="btn btn-primary" ng-click="newFeet()">I -> F</button>
+            <button class="btn btn-danger" ng-click="reset()">Clear</button>
+        </div>
     </div>
-    <div class="panel panel-default" ng-controller="KtomController as ktom" id="ktom">
-        <h1>Kilometers/Miles</h1>
-        <h2> Kilometers: {{ktom.miles / 0.62137}}  Miles: {{ktom.kilometers * 0.62137}}</h2>
-        <label for="kilometers"> Kilometers: </label>
-        <input id="kilometers" type="number" ng-model="ktom.kilometers" class="form-control" />
-        <label for="miles"> Miles: </label>
-        <input id="miles" type="number" ng-model="ktom.miles" class="form-control" />
+    <div class="panel panel-primary" ng-controller="KtomController" id="ktom">
+        <div class="panel-heading">
+            <h1 class="panel-title">Kilometers/Miles</h1>
+        </div>
+        <div class="panel-body">
+            <h2> Kilometers: {{kiloResult}}  Miles: {{milesResult}}</h2>
+            <label for="kilometers"> Kilometers: </label>
+            <input id="kilometers" type="number" ng-model="kilometers" class="form-control" />
+            <label for="miles"> Miles: </label>
+            <input id="miles" type="number" ng-model="miles" class="form-control" />
+            <button class="btn btn-primary" ng-click="newMiles()">K -> M</button>
+            <button class="btn btn-primary" ng-click="newKilometers()">M -> K</button>
+            <button class="btn btn-danger" ng-click="reset()">Clear</button>
+        </div>
     </div>
-    <div class="panel panel-default" ng-controller="PtokController as ptok" id="ptok">
-        <h1>Pounds/Kilograms</h1>
-        <h2> Pounds: {{ptok.kilograms * 2.2046}}  Kilograms:  {{ptok.pounds / 2.2046}}</h2>
-        <label for="pounds"> Pounds: </label>
-        <input id="pounds" type="number" ng-model="ptok.pounds" class="form-control" />
-        <label for="kilograms"> Kilograms: </label>
-        <input id="kilograms" type="number" ng-model="ptok.kilograms" class="form-control" />
+    <div class="panel panel-primary" ng-controller="PtokController" id="ptok">
+        <div class="panel-heading">
+            <h1 class="panel-title">Pounds/Kilograms</h1>
+        </div>
+        <div class="panel-body">
+            <h2> Pounds: {{poundsResult}}  Kilograms:  {{kiloResult}}</h2>
+            <label for="pounds"> Pounds: </label>
+            <input id="pounds" type="number" ng-model="pounds" class="form-control" />
+            <label for="kilograms"> Kilograms: </label>
+            <input id="kilograms" type="number" ng-model="kilograms" class="form-control" />
+            <button class="btn btn-primary" ng-click="newKilograms()">P -> K</button>
+            <button class="btn btn-primary" ng-click="newPounds()">K -> P</button>
+            <button class="btn btn-danger" ng-click="reset()">Clear</button>
+        </div>
     </div>
-    <div class="panel panel-default" ng-controller="LandpController as landp" id="landp">
-        <h1>Loans/Payments</h1>
-        <h2> Payment Amount: {{landp.answer(landp.principal,landp.rate,landp.payments)}}  </h2>
-        <label for="principal"> Principal Balance: </label>
-        <input id="principal" type="number" ng-model="landp.principal" class="form-control" />
-        <label for="rate"> Interest Rate: </label>
-        <input id="rate" type="number" ng-model="landp.rate" class="form-control" />
-        <label for="payments"> Number of Payments: </label>
-        <input id="rate" type="number" ng-model="landp.payments" class="form-control" />
-       
+    <div class="panel panel-primary" ng-controller="LandpController" id="landp">
+        <div class="panel-heading">
+            <h1 class="panel-title">Compund Interest</h1>
+        </div>
+        <div class="panel-body">
+            <h2> Total Amount Paid (Rounded to nearest $): {{answer}} </h2>
+            <label for="principal"> Principal Balance: </label>
+            <input id="principal" type="number" ng-model="principal" class="form-control" />
+            <label for="rate"> Interest Rate: </label>
+            <input id="rate" type="number" ng-model="rate" class="form-control" />
+            <label for="payments"> Number of Payments: </label>
+            <input id="rate" type="number" ng-model="payments" class="form-control" />
+            <button class="btn btn-primary" ng-click="submit()">Submit</button>
+            <button class="btn btn-danger" ng-click="reset()">Clear</button>
+        </div>
     </div>
 
 

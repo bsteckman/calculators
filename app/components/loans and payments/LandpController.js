@@ -1,10 +1,17 @@
-app.controller('LandpController', function () {
-    this.test = "LOANS AND PAYMENTS CONTROLLER!!!";
-    this.principal = 1
-    this.rate = 1;
-    this.payments = 1;
-    this.answer = function(principal,rate,payments){
-     return (principal * (Math.pow((1 + (rate/100)), payments)))
-    }
+app.controller('LandpController', function ($scope) {
+   $scope.test = "LOANS AND PAYMENTS CONTROLLER!!!";
+   $scope.principal = null;
+   $scope.rate = null;
+   $scope.payments = null;
    
+   
+   $scope.submit = function(principal,rate,payments){
+     $scope.answer = (Math.round($scope.principal * (Math.pow((1 + ($scope.rate/100)), $scope.payments))));
+    }
+   $scope.reset = function(){
+       $scope.principal = null;
+       $scope.rate = null;
+       $scope.payments = null;
+       $scope.answer = null;
+   }
 });
