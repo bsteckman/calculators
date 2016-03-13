@@ -32,7 +32,8 @@
                 <h1 class="panel-title">Fahrenheit/Celsius</h1>
             </div>
             <div class="panel-body">
-                <h2>Fahrenheit: {{fahrResult}}  Celsius: {{celResult}}</h2>
+                <h2>Fahrenheit: {{fahrResult}}</h2>  
+                <h2>Celsius: {{celResult}}</h2>
                 <label for="Fahrenheit"> &#8457: </label>
                 <input type="number" ng-model="fahrenheit" class="form-control" />
                 <label for="Celsius"> &#8451: </label>
@@ -47,7 +48,8 @@
                 <h1 class="panel-title">Feet/Inches</h1>
             </div>
             <div class="panel-body">
-                <h2>Feet: {{feetResult}}  Inches {{inchesResult}}</h2>
+                <h2>Feet: {{feetResult}}</h2> 
+                <h2>Inches {{inchesResult}}</h2>
                 <label for="Feet"> Feet: </label>
                 <input type="number" ng-model="feet" class="form-control" />
                 <label for="inches"> Inches: </label>
@@ -62,7 +64,8 @@
                 <h1 class="panel-title">Kilometers/Miles</h1>
             </div>
             <div class="panel-body">
-                <h2> Kilometers: {{kiloResult}}  Miles: {{milesResult}}</h2>
+                <h2> Kilometers: {{kiloResult}}</h2> 
+                <h2>Miles: {{milesResult}}</h2>
                 <label for="kilometers"> Kilometers: </label>
                 <input id="kilometers" type="number" ng-model="kilometers" class="form-control" />
                 <label for="miles"> Miles: </label>
@@ -77,7 +80,8 @@
                 <h1 class="panel-title">Pounds/Kilograms</h1>
             </div>
             <div class="panel-body">
-                <h2> Pounds: {{poundsResult}}  Kilograms:  {{kiloResult}}</h2>
+                <h2> Pounds: {{poundsResult}}</h2> 
+                <h2>Kilograms:  {{kiloResult}}</h2>
                 <label for="pounds"> Pounds: </label>
                 <input id="pounds" type="number" ng-model="pounds" class="form-control" />
                 <label for="kilograms"> Kilograms: </label>
@@ -92,7 +96,7 @@
                 <h1 class="panel-title">Compund Interest</h1>
             </div>
             <div class="panel-body">
-                <h2> Total Amount Paid (Rounded to $): {{answer}} </h2>
+                <h2> Total Amount: ${{answer}} </h2>
                 <label for="principal"> Principal Balance: </label>
                 <input id="principal" type="number" ng-model="principal" class="form-control" />
                 <label for="rate"> Interest Rate: </label>
