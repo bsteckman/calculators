@@ -6,7 +6,7 @@ app.controller('LandpController', function ($scope) {
    
    
    $scope.submit = function(principal,rate,payments){
-     $scope.answer = (Math.round($scope.principal * (Math.pow((1 + ($scope.rate/100)), $scope.payments))));
+     $scope.answer = '$' + (Math.round($scope.principal * (Math.pow((1 + ($scope.rate/100)), $scope.payments))));
     }
    $scope.reset = function(){
        $scope.principal = null;
